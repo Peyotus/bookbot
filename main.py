@@ -1,16 +1,9 @@
 path_to_file = "books/frankenstein.txt"
 
-def main():
-    with open(path_to_file) as f:
-        file_contents = f.read()
-        word_list = []
-        word_list = file_contents.split()
-        count = 0
-        for word in word_list:
-            count += 1
-        print(f"Found {count} total words")
-    return
+from stats import get_num_words
 
+def main():
+    get_num_words(path_to_file)
 main()
 
 
